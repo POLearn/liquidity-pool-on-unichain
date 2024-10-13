@@ -5,7 +5,7 @@
         "chain": "1301",
         "title": "Create your own liquidity pool on Unichain",
         "description": "Step-by-step instructions designed to guide users through the process of creating a trading pool on Unichain",
-        "image": "https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/cover.png"
+        "image": "https://raw.githubusercontent.com/POLearn/liquidity-pool-on-unichain/refs/heads/master/content/assets/cover.png"
     },
     "quests": []
 }
