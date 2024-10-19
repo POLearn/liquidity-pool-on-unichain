@@ -1,3 +1,3 @@
-# Introduction 
+Welcome to the course on **Unichain** and **Uniswap**, where you'll explore the future of decentralized finance (DeFi) on Layer 2 (L2) blockchains. Unichain is an ultra-fast L2 blockchain designed for scalable DeFi solutions, offering low fees and rapid transaction times. We'll show you how to deploy smart contracts, interact with Unichain’s network, and leverage these advantages to build decentralized applications that scale effortlessly.
 
-Come back soon, to learn about Unichain and earn yourself a POAP!
+You'll also learn how to create and manage **liquidity pools** using Uniswap, one of the most popular DeFi protocols. By the end of this course, you'll understand how to deploy Uniswap’s automated market maker (AMM) contracts on Unichain, allowing you to facilitate token swaps and provide liquidity efficiently on this powerful L2 network.

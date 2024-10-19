@@ -7,5 +7,16 @@
         "description": "Step-by-step instructions designed to guide users through the process of creating a trading pool on Unichain",
         "image": "https://raw.githubusercontent.com/POLearn/liquidity-pool-on-unichain/refs/heads/master/content/assets/cover.png"
     },
-    "quests": []
+    "quests": [
+        {
+            "path": "02_deploying_your_tokens/01_deploying_base_token",
+            "type": "deployment",
+            "bytecode": "0x8a89bda68b551df542661b0ebcf2e3f5af2d5eb4bd7cd36f86ea08f98a053d45"
+        },
+        {
+            "path": "02_deploying_your_tokens/02_deploying_quote_token",
+            "type": "deployment",
+            "bytecode": "0x8a89bda68b551df542661b0ebcf2e3f5af2d5eb4bd7cd36f86ea08f98a053d45"
+        }
+    ]
 }
