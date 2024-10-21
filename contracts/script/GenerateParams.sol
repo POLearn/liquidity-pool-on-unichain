@@ -36,7 +36,7 @@ contract GenerateParams is Constants, Config {
     int24 tickUpper = 600;
     /////////////////////////////////////
 
-    // This is what we want from run
+    // This is what we want from run for multicall parameters
     bytes[] public params = new bytes[](2);
     
     function run() external {
@@ -67,9 +67,6 @@ contract GenerateParams is Constants, Config {
 
         (bytes memory actions, bytes[] memory mintParams) =
             _mintLiquidityParams(pool, tickLower, tickUpper, liquidity, amount0Max, amount1Max, address(this), hookData);
-
-        // multicall parameters
-        bytes[] memory params = new bytes[](2);
 
         // initialize pool
         params[0] = abi.encodeWithSelector(posm.initializePool.selector, pool, startingPrice, hookData);
