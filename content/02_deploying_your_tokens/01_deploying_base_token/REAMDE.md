@@ -4,25 +4,21 @@ In a liquidity pool (LP), the base token is the primary asset that users aim to 
 
 ### Deploying a Base Token on Unichain
 
-*Entire source code can be found from the official Viction Repository: https://github.com/POLearn/liquidity-pool-on-unichain/blob/master/contracts/ExampleToken.sol*
+*Entire source code can be found from the repository: https://github.com/POLearn/liquidity-pool-on-unichain/blob/master/contracts/ExampleToken.sol*
 
-### Prepare Your Contract
+### Coding Smart Contract
 
-- Change the contract name from `ExampleToken` to `BaseToken` and the symbol from `EXT` to `UBT` in the source code.
+Change the contract name from `ExampleToken` to `BaseToken` and the symbol from `EXT` to `UBT` in the source code. This an ERC-20 token contract, minting 1,000,000 tokens to the deployer.
 
-### Compile Your Contract
+### Deploying Base Token on Unichain
 
-- Use a Solidity compiler (version 0.8.23) to compile your modified contract.
-
-### Deploy to Unichain
-
-- Connect your wallet to the Unichain network.
-- Deploy the compiled contract through your chosen development environment or tools like Remix.
+1. Use a Solidity compiler (version 0.8.23) to compile your ExampleToken contract.
+2. Connect your wallet to the Unichain network.
+3. Deploy the compiled contract.
 
 ### Confirm Deployment
 
-- Verify that your contract is successfully deployed by checking its address on the Unichain block explorer. 
+1. Verify that your contract is successfully deployed by checking its address on the Unichain block explorer. 
+2. You can call the `name` or `symbol` to ensure that the results are `BaseToken` and `UBT`
 
-### Start Using Your Base Token
-
-- Your new base token, UBT, is ready! You can now use it in your liquidity pool on Unichain.
+> To complete this quest on POL, submit your deployed contract transaction to the Proof of Learn (POL) platform. This confirms that you've successfully deployed the ERC20 Token contract!
