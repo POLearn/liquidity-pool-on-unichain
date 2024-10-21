@@ -12,7 +12,7 @@ import {IERC20} from "forge-std/interfaces/IERC20.sol";
 import {Constants} from "./base/Constants.sol";
 import {Config} from "./base/Config.sol";
 
-contract CreatePoolAndAddLiquidityScript is Script, Constants, Config {
+contract GenerateParams is Constants, Config {
     using CurrencyLibrary for Currency;
 
     /////////////////////////////////////
@@ -78,5 +78,25 @@ contract CreatePoolAndAddLiquidityScript is Script, Constants, Config {
         params[1] = abi.encodeWithSelector(
             posm.modifyLiquidities.selector, abi.encode(actions, mintParams), block.timestamp + 60
         );
+    }
+
+        /// @dev helper function for encoding mint liquidity operation
+    /// @dev does NOT encode SWEEP, developers should take care when minting liquidity on an ETH pair
+    function _mintLiquidityParams(
+        PoolKey memory poolKey,
+        int24 _tickLower,
+        int24 _tickUpper,
+        uint256 liquidity,
+        uint256 amount0Max,
+        uint256 amount1Max,
+        address recipient,
+        bytes memory hookData
+    ) internal pure returns (bytes memory, bytes[] memory) {
+        bytes memory actions = abi.encodePacked(uint8(Actions.MINT_POSITION), uint8(Actions.SETTLE_PAIR));
+
+        bytes[] memory params = new bytes[](2);
+        params[0] = abi.encode(poolKey, _tickLower, _tickUpper, liquidity, amount0Max, amount1Max, recipient, hookData);
+        params[1] = abi.encode(poolKey.currency0, poolKey.currency1);
+        return (actions, params);
     }
 }
